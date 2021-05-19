@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- IMPORT CHART.JS  -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- IMPORT CSS  -->
+    <link rel="stylesheet" href="./src/style.css">
+
+    <!-- IMPORT FONTS -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300&display=swap" rel="stylesheet">
+
+    <title>Macro Cadastro</title>
+</head>
+<body>
+    <div id="title" class="header" style="background: #ffffff;">
+        <h2>MACRO CADASTRO</h2>
+
+        <div class="action-btn">
+            <span><button class="btn"><img src="./src/img/update_black_24dp.svg" alt=""></button></span>
+            <span ><button class="btn"><img src="./src/img/file_upload_black_24dp.svg" alt=""></button></span>
+        </div>
+    </div>
+
+    
+    <div id="banner">
+        <img src="./src/img/File.png" width="100%" alt="">
+    </div>
+    
+    <div id="filter">
+        <label for="cpf">CPF:</label>
+
+        <select id="cpf">
+        <option value="null">--Selecionar--</option>
+        <option value="#">999.999.999-99</option>
+        <option value="#">888.888.888-88</option>
+        <option value="#">777.777.777-77</option>
+        <option value="#">666.666.666-66</option>
+        </select>
+
+
+        <label for="cpf">E-mail</label>
+
+        <select id="cpf">
+        <option value="null">--Selecionar--</option>
+        <option value="#">Unknown</option>
+        </select>
+    </div>
+
+    <div id="num-cad">
+        <h2 class="text-cad-title">NÚMERO DE CADASTROS</h2>
+        <h2 class="text-cad-subtitle">23905</h2>
+    </div>
+
+<div class="first-graphs">
+    <div class="graph-align quadro">
+        <div>
+            <p>FORMA DE ACESSO À PLATAFORMA</p> <hr>
+
+            <div class="filter-graph">
+                <input type="checkbox" id="acess" name="scales"checked>
+                <label for="scales">Forma de acesso</label>
+
+                <input type="checkbox" id="wpp" name="scales"checked>
+                <label for="scales">Via Whatsapp 283</label>
+
+                <input type="checkbox" id="dektop" name="scales"checked>
+                <label for="scales">Via Desktop 23622</label>
+            </div>
+
+            <canvas id="FORMA-DE-ACESSO" style="margin-top: 17%;"></canvas>
+        </div>
+    </div>
+
+    <div class="graph-align quadro">
+        <div>
+            <p>CADASTRO POR PERFIL</p> <hr>
+
+            <div class="filter-graph">
+                <input type="checkbox" id="profile" name="scales"checked>
+                <label for="scales">PERFIL</label>
+
+                <input type="checkbox" id="colabCO" name="scales"checked>
+                <label for="scales">Colaborador(a) Natura&CO 592</label>
+
+                <input type="checkbox" id="consult" name="scales"checked>
+                <label for="scales">Consultora Natura 20293</label>
+
+                <input type="checkbox" id="consum" name="scales"checked>
+                <label for="scales">Consumidora 336</label>
+
+                <input type="checkbox" id="lider" name="scales"checked>
+                <label for="scales">Líder 2681</label>
+            </div>
+
+            <canvas id="CADASTROS-POR-PERFIL"></canvas>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="graph-align all-allign quadro">
+    <div>
+        <p>CRESCIMENTO DE CADASTRO</p> <hr>
+
+        <div class="filter-graph">
+            <input type="checkbox" id="profile" name="scales"checked>
+            <label for="scales">PERFIL</label>
+
+            <input type="checkbox" id="colabCO" name="scales"checked>
+            <label for="scales">Colaborador(a) Natura&CO</label>
+
+            <input type="checkbox" id="consult" name="scales"checked>
+            <label for="scales">Consultora Natura</label>
+
+            <input type="checkbox" id="consum" name="scales"checked>
+            <label for="scales">Consumidora</label>
+
+            <input type="checkbox" id="lider" name="scales"checked>
+            <label for="scales">Líder</label>
+        </div>
+
+        <canvas id="CRESCIMENTO-DE-CADASTROS"></canvas>
+    </div>
+</div>
+
+
+
+    <div id="quadro-metas" class="quadro">
+        <div class="title-quadro-metas">
+            <h2>QUADRO DE METAS</h2>
+        </div>
+        <table style="width:100%">
+            <tr>
+              <th>Perfil</th>
+              <th>Meta</th>
+            </tr>
+            <tr>
+              <td>Consultora Natura</td>
+              <td>200.000</td>
+            </tr>
+            <tr>
+              <td>Líder</td>
+              <td>4.500</td>
+            </tr>
+          </table>
+    </div>
+
+
+
+
+<div class="first-graphs">
+        <!-- GRAFICO DA META ATUAL  -->
+
+        <div class="graph-align quadro">
+            <div>
+                <p>PERCENTUAL DA META (%)</p> <hr>
+        
+                <canvas id="PERCENTUAL-DA-META"></canvas>
+            </div>
+        </div>
+    
+    
+        <!-- GRAFICO STATUS GERAL PROJETO DE VIDA -->
+    
+    
+        <div class="graph-align quadro">
+            <div>
+                <p>STATUS GERAL PROJETO DE VIDA</p> <hr>
+        
+                <canvas id="STATUS-GERAL-PROJETO-DE-VIDA"></canvas>
+            </div>
+        </div>
+    
+</div>
+
+    <!-- GRAFICO STATUS GERAL PROJETO DE VIDA POR PERFIL -->
+
+    <div class="graph-align all-allign quadro">
+        <div>
+            <p>STATUS GERAL PROJETO DE VIDA</p> <hr>
+
+            <canvas id="STATUS-GERAL-PROJETO-DE-VIDA-POR-PERFIL"></canvas>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- SCRIPT CHART.JS -->
+    <script>
+        let ctx = document.getElementById("FORMA-DE-ACESSO")
+
+        let chart = new Chart (ctx, {
+            type: 'pie',
+            data: {
+                
+                datasets: [
+                    {
+                       
+                        data: [283,23622],
+                        backgroundColor:[
+                            '#cc3f14',
+                            '#5e663d'
+                        ]
+                    }
+                ]
+            }
+        }) 
+    </script>
+
+    <!-- GRAFICO CADASTROS POR PERFIL -->
+    <script>
+        let ctx2 = document.getElementById("CADASTROS-POR-PERFIL")
+
+        let chart2 = new Chart (ctx2, {
+            type: 'pie',
+            data: {
+                
+                datasets: [
+                    {
+                        
+                        data: [595,20293,336,2681],
+                        backgroundColor:[
+                            '#fe7b10',
+                            '#cc3f14',
+                            '#5e663d',
+                            '#3b3d40'
+                        ]
+                    }
+                ]
+            }
+        }) 
+    </script>
+
+
+<!-- GRAFICO CRESCIMENTO DE CADASTROS -->
+<script>
+    let ctx3 = document.getElementById("CRESCIMENTO-DE-CADASTROS")
+
+    let chart3 = new Chart (ctx3, {
+        type: 'bar',
+        data: {
+            labels: ["28 Apr 2021", "29 Apr 2021","30 Apr 2021", "01 May 2021", "02 May 2021" ,"03 May 2021" ,"04 May 2021", "05 May 2021", "06 May 2021", "07 May 2021", "08 May 2021", "09 May 2021", "10 May 2021", "11 May 2021", "12 May 2021", "13 May 2021", "14 May 2021", "15 May 2021"],
+            datasets: [
+                {
+                    label: "CRESCIMENTO DE CADASTRO POR PERFIL",
+                    data: [321,1273,1687,949,321,1186,1573,1170,1269,1117,478,165,1322,1736,1893,1544,1790,499],
+                    backgroundColor:[
+                        '#fe7b10',
+                        '#cc3f14',
+                        '#5e663d',
+                        '#3b3d40'
+                    ]
+                }
+            ]
+        }
+    }) 
+</script>
+
+
+
+
+<!-- GRAFICO PERCENTUAL DA META -->
+<script>
+    let ctx4 = document.getElementById("PERCENTUAL-DA-META")
+
+    let chart4 = new Chart (ctx4, {
+        type: 'bar',
+        data: {
+            labels: ["Líder", "Consultor","Consumidor", "Colaborador"],
+            datasets: [
+                {
+                    
+                    data: [59.58,10.15,0,0,100],
+                    backgroundColor:[
+                        '#3b3d40'
+                    ]
+                }
+            ]
+        }
+    }) 
+</script>
+
+
+
+
+
+<!-- GRAFICO STATUS GERAL PROJETO DE VIDA -->
+<script>
+    let ctx5 = document.getElementById("STATUS-GERAL-PROJETO-DE-VIDA")
+
+    let chart5 = new Chart (ctx5, {
+        type: 'bar',
+        data: {
+            labels: ["Cadastros", "Iniciaram","Finalizaram"],
+            datasets: [
+                {
+                    
+                    data: [23905,20308,14110],
+                    backgroundColor:[
+                        '#fe7b10',
+                        '#cc3f14',
+                        '#3b3d40'
+                    ]
+                }
+            ]
+        }
+    }) 
+</script>
+
+
+
+
+
+
+
+
+
+
+<!-- GRAFICO STATUS GERAL PROJETO DE VIDA POR PERFIL -->
+<script>
+    let ctx6 = document.getElementById("STATUS-GERAL-PROJETO-DE-VIDA-POR-PERFIL")
+
+    let chart6 = new Chart (ctx6, {
+        type: 'bar',
+        data: {
+            labels: ["Colaborador(a)", "Consultor Natura","Consumidora", "Líder"],
+            datasets: [
+                {
+                    
+                    data: [595,20293, 336, 2681],
+                    backgroundColor:[
+                        '#fe7b10',
+                        '#cc3f14',
+                        '#3b3d40'
+                    ]
+                }
+            ]
+        }
+    }) 
+</script>
+
+
+</body>
+</html>
